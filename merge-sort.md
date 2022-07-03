@@ -17,3 +17,18 @@
 
 - Bölme işlemi bittikten sonra, tek eleman olan dizileri ikili ikili birleştiriyoruz. Sıralı dizi elde edinceye kadar bu işleme devam ediyoruz.
 
+|                                                     |  |  |  |  |  |  |  |  |  |  |  |  |
+|-----------------------------------------------------|- |- |- |- |- |- |- |- |- |- |- |- |
+|                                                     |16|  |21|  |11|  |  |8 |  |12|  |22|
+|                                                     |  |  |  |  |  |  |  |  |  |  |  |  |
+|İkili ikili sıralayarak birleştiriyoruz.             |  |16|21|  |11|  |  |8 |  |12|22|  | 
+|                                                     |  |  |  |  |  |  |  |  |  |  |  |  |
+|Tekrar ikili ikili sıralayarak birleştiriyoruz.      |  |  |11|16|21|  |  |8 |12|22|  |  |
+|                                                     |  |  |  |  |  |  |  |  |  |  |  |  |
+|Son birleştirmede dizimizi elde ediyoruz.            |  |  |  |8 |11|12|16|21|22|  |  |  |
+|                                                     |  |  |  |  |  |  |  |  |  |  |  |  |
+
+
+2. Big-O gösterimini yazınız.
+Recursive bir fonksiyon olduğu için sürekli kendini ikiye bölmektedir. Her bölünmüş dizinin Merge işlemi için dizinin uzunluğu olan n işlem yapılır. 
+     - O(n*(logn)) --> O(6*(log6)) olur.
